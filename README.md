@@ -7,8 +7,11 @@ A simple code in Elixir to generate strong passwords
 Features
 
   \-	Random and strong password generation.
+  
   \-  Customization of password length. 
+  
   \-	Use of special characters, numbers, and letters for optimal security. 
+  
   \- Temporary password backup. 
 
 Usage
