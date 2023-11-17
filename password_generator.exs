@@ -33,7 +33,11 @@ defmodule PasswordManager do
 
     IO.puts("Do you want to save it? (yes/no)")
     case IO.gets("") |> String.trim do
-      "yes" -> File.write!(@filename, result)
+      "yes" -> 
+        unless File.exists?(@filename) do
+          File.write!(@filename, "")
+        end
+        File.write!(@filename, result)
         IO.puts("Registration in #{@filename}..")
       "no" -> :ok
       _ -> IO.puts("Password not saved, please respect the syntax... (yes/no)")
